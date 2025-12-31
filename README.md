@@ -5,7 +5,7 @@ This repository contains a quantitative framework designed to identify and valid
 ## 📊 Performance Summary
 The model identifies a clear bifurcation in market efficiency. Seasonal alpha persists in markets with rigid physical supply constraints, while benchmark equities remain seasonally efficient.
 
-![Final Results](RESEARCH NOTE_ Structural Seasonal Alpha in Physical Commodities.pdf) 
+![Final Results](Code_Generated_Image.png) 
 
 ### Key Statistics
 | Asset | Annualized Alpha | Sharpe (WF) | P-Value |
