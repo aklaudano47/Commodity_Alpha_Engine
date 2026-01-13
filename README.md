@@ -42,5 +42,5 @@ The research confirms that Alpha is a function of **Physical Rigidity**. Seasona
 * **Validation:** Non-Parametric Permutation (Monte Carlo)
 * **Architecture:** AI-Augmented Systematic Design
 
-**Contact:** [Alexander Laudano]  
-**LinkedIn:** [Your LinkedIn Link]
+**Contact:** Alexander Laudano @alexlaudano22@gmail.com
+**LinkedIn:** https://www.linkedin.com/in/alexander-laudano-874073259/
