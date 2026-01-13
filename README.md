@@ -10,10 +10,10 @@ Unlike traditional models that ignore implementation costs, this engine applies 
 
 | Strategy / Asset | Net Alpha (65bps) | Sharpe Ratio | P-Value (1,000 Reps) |
 |:--- |:---:|:---:|:---:|
-| **Master Fund (Aggregated)** | **+5.82%** | **0.61** | **Systematic Portfolio** |
-| **LUMBER** | **+6.73%** | **0.60** | **0.000*** |
-| **WHEAT** | **+2.41%** | **0.35** | **0.000*** |
-| **CORN** | **+0.75%** | **0.32** | **0.000*** |
+| **Master Fund (Aggregated)** | **+5.82%** | **0.61** | **0.000***** |
+| **LUMBER** | **+6.73%** | **0.60** | **0.000***** |
+| **WHEAT** | **+2.41%** | **0.35** | **0.000***** |
+| **CORN** | **+0.75%** | **0.32** | **0.000***** |
 | **DOW JONES (Control)** | -6.42% | 0.00 | 0.722 |
 
 ---
