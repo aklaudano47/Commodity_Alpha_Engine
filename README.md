@@ -1,36 +1,30 @@
-# Commodity Alpha Engine: Stress-Tested Seasonal Backtesting
+Systematic Seasonal Arbitrage: Recursive Alpha in Commodity Futures
+Overview
+This repository houses a production-grade quantitative research suite that identifies and operationalizes structural seasonal anomalies. Moving beyond simple backtesting, the framework utilizes Recursive Walk-Forward Optimization and Non-Parametric Permutation Testing to isolate alpha that survives institutional-grade execution friction.
 
-This repository contains a quantitative framework designed to identify and validate structural seasonal alpha across 14 asset classes, specifically adjusted for real-world transaction costs and execution friction.
+The "Friction-Adjusted" Edge
+Most academic models fail in production because they ignore the "bid-ask spread" and "roll costs." This engine applies a mandatory 65bps (0.65%) penalty per trade.
 
-### Performance Summary (Net of 50bps Friction)
+Asset,Net Alpha (65bps),Sharpe Ratio,P-Value (Permutation)
+LUMBER,6.73%,0.61,0.000*
+WHEAT,2.52%,0.36,0.000*
+CORN,1.10%,0.33,0.004*
 
-The model reveals that seasonal alpha is not just a statistical anomaly; it is a **risk premium** that persists even after accounting for transaction costs in markets with rigid physical supply constraints.
+Key Technical Breakthroughs
+1. Recursive Walk-Forward Engine
+To eliminate Look-Ahead Bias, the model re-optimizes every year using only historical data. It simulates a "Real-Time" decision-making process where the strategy must "learn" the seasonal ranks dynamically.
 
-| Asset | Strategy Ret (%) | B&H Ret (%) | Net Alpha (%) | Sharpe (WF) | P-Value |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| **LUMBER** | 9.44 | 2.23 | **7.21***** | 0.62 | 0.000 |
-| **WHEAT** | 4.76 | 1.88 | **2.88***** | 0.38 | 0.000 |
-| **CORN** | 3.51 | 2.30 | **1.21***** | 0.35 | 0.000 |
-| **OJ** | -0.58 | 2.11 | -2.69 | -0.09 | 0.146 |
-| **DOW JONES** | -0.41 | 5.80 | -6.21 | 0.00 | 0.722 |
-| **BITCOIN** | 11.72 | 72.59 | -60.87 | 0.46 | 0.130 |
+2. Non-Parametric Validation
+Given that commodity returns are fat-tailed and non-normal, standard t-tests are unreliable. I implemented a 1,000-rep Permutation Test to generate a synthetic null distribution, proving that the Lumber and Wheat signals are statistically significant at the 99.9% confidence level.
 
----
+3. Portfolio Engineering (The Master Fund)
+Recognizing the high idiosyncratic volatility of single-asset commodities, I engineered a Master Fund aggregator. By blending non-correlated seasonal signals (Industrial vs. Agricultural), the framework achieved:
 
-### Methodology: The "Stress Test"
+Drawdown Mitigation: Reduced Max Drawdown from -23.6% (Lumber) to -16.3% (Portfolio).
 
-To go beyond standard backtesting, this engine implements:
+Risk-Adjusted Stability: Stabilized the equity curve for institutional viability.
 
-* **0.50% Execution Friction:** Every active trade is penalized by 50 basis points to simulate the "Cost of Carry," slippage, and contract roll costs.
-* **Recursive Walk-Forward Optimization:** Simulates out-of-sample decision-making by re-optimizing the strategy annually using an expanding historical window.
-* **Permutation Significance Testing:** 1,000 shuffles per asset to validate that the observed spread is not the result of stochastic noise.
+Strategic Thesis
+The research confirms that Alpha is a function of Physical Rigidity. Seasonality fails in highly liquid/financialized assets (Bitcoin, Dow Jones) but persists in markets with biological supply constraints and high storage costs. This project serves as an empirical rejection of the Weak-Form Efficient Market Hypothesis in the commodity complex.
 
----
-
-### Strategic Thesis
-
-The "Extraction" phase of this research confirms that while seasonal trends exist broadly, only a subset of commodities—specifically those with **high physical storage costs and rigid biological cycles**—offer alpha that survives implementation costs. 
-
-The failure of the strategy in Bitcoin and the Dow Jones reinforces the hypothesis that seasonality is a function of physical supply chains, not general market sentiment.
-
-**Contact:** [Alexander Laudano] | [LinkedIn](https://www.linkedin.com/in/alexander-laudano-874073259/)
+Author: Alexander Laudano Technical Specialty: R-Programming (Tidyquant, PerformanceAnalytics), AI-Augmented Systems Architecture, Risk Mitigation.
