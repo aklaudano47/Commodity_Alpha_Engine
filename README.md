@@ -8,7 +8,7 @@ Moving beyond standard academic backtesting, the engine utilizes **Recursive Wal
 ### 📊 Performance Summary (Net of 65bps Friction)
 Unlike traditional models that ignore implementation costs, this engine applies a mandatory **65bps (0.65%) penalty** per trade to account for bid-ask spreads, slippage, and contract roll costs.
 
-| Strategy / Asset | Net Alpha (65bps) | Sharpe Ratio | P-Value (1,000 Reps) |
+| Strategy / Asset | Net Alpha (65bps) | Sharpe Ratio | P-Value |
 |:--- |:---:|:---:|:---:|
 | **Master Fund (Aggregated)** | **+5.82%** | **0.61** | **0.0000***** |
 | **LUMBER** | **+6.73%** | **0.60** | **0.0000***** |
