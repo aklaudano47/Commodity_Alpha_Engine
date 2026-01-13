@@ -8,9 +8,9 @@ Unlike traditional models that report "gross" returns, this engine applies a man
 
 | Asset | Net Alpha (65bps) | Sharpe Ratio | P-Value (1,000 Reps) |
 |:--- |:---:|:---:|:---:|
-| **LUMBER** | **6.73%** | **0.61** | **0.000*** |
-| **WHEAT** | **2.52%** | **0.36** | **0.000*** |
-| **CORN** | **1.10%** | **0.33** | **0.004*** |
+| **LUMBER** | **6.73%** | **0.61** | **0.000***** |
+| **WHEAT** | **2.52%** | **0.36** | **0.000***** |
+| **CORN** | **1.10%** | **0.33** | **0.004***** |
 | **DOW JONES** | -6.42% | 0.00 | 0.722 |
 | **BITCOIN** | -61.2% | 0.46 | 0.130 |
 
