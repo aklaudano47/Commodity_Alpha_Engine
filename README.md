@@ -14,7 +14,7 @@ Unlike traditional models that ignore implementation costs, this engine applies 
 | **LUMBER** | **+6.73%** | **0.60** | **0.0000***** |
 | **WHEAT** | **+2.41%** | **0.35** | **0.0000***** |
 | **CORN** | **+0.75%** | **0.32** | **0.0004***** |
-| **DOW JONES (Control)** | -6.42% | 0.0000 | 0.722 |
+| **DOW JONES (Control)** | -6.42% | 0.00 | 0.7220 |
 
 ---
 
