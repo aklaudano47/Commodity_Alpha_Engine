@@ -15,7 +15,7 @@
 3. **Validation:** Implemented a **1,000-rep Permutation Test** to generate a synthetic null distribution. This confirms that the alpha is a result of structural edge (biological/industrial cycles) rather than stochastic luck.
 ![Permutation Test](Permutation_Plot.png)
 4. **Portfolio Aggregation:** Developed a "Master Fund" to blend non-correlated signals across industrial and agricultural sectors to smooth the equity curve and compress drawdowns.
-
+![Alpha Comparison Chart](alpha_comparison_chart.png)
 ## Results
 | Strategy / Asset | Net Alpha (65bps) | Sharpe Ratio | P-Value |
 |:--- |:---:|:---:|:---:|
@@ -28,7 +28,6 @@
 * **Accuracy Metrics:** * **Master Fund (Aggregated):** +5.82% Net Alpha with a **0.61 Sharpe Ratio**.
   * **Lumber:** +6.73% Net Alpha (P-Value: 0.0000).
   * **Dow Jones (Control):** -6.42% (Confirming efficiency in financialized assets).
-![Alpha Comparison Chart](alpha_comparison_chart.png)
 * **Key Findings:** * Seasonal alpha is a function of **Physical Constraints**. 
   * Signal aggregation reduced Max Drawdown from **-23.6%** (single asset) to **-16.3%** (Master Fund), making the strategy institutionally viable.
 ![Equity Curve](MasterFund_EquityCurve.png)
