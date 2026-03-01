@@ -1,13 +1,22 @@
-# Systematic Seasonal Arbitrage: Recursive Alpha in Commodity Futures
+# Commodity Alpha Engine: Systematic Seasonal Arbitrage
 
-### Overview
-This repository contains a production-grade quantitative research framework designed to identify and operationalize structural seasonal anomalies in the commodity complex. 
+## Business Framing
+* **The Problem:** Many quantitative strategies fail in production because they rely on "backtest-fitted" anomalies that disappear once execution friction and look-ahead bias are accounted for. Furthermore, traditional financialized assets (like Equities or Bitcoin) have become too efficient for simple seasonal strategies to extract alpha.
+* **Why it Matters:** This research identifies a structural "bifurcation" in market efficiency. It proves that alpha persists in markets with **physical rigidity** (Lumber, Wheat, Corn) due to harvest cycles and storage constraints, while being non-existent in financial benchmarks (Dow Jones). This engine provides a roadmap for institutional portfolios to capture non-correlated returns that are statistically resistant to noise.
 
-Moving beyond standard academic backtesting, the engine utilizes **Recursive Walk-Forward Optimization** and **Non-Parametric Permutation Testing** to isolate alpha that survives institutional-grade execution friction.
+## Tools Used
+* **Language:** R
+* **Key Libraries:** `Tidyquant`, `PerformanceAnalytics`, `PortfolioAnalytics`, `Purrr` 
+* **Statistical Methods:** Recursive Expanding-Window (OOS), Non-Parametric Permutation Testing (1,000-Rep Monte Carlo)
 
-### Performance Summary (Net of 65bps Friction)
-Unlike traditional models that ignore implementation costs, this engine applies a mandatory **65bps (0.65%) penalty** per trade to account for bid-ask spreads, slippage, and contract roll costs.
+## Process
+1. **Recursive Walk-Forward Engine:** To eliminate look-ahead bias, the model re-optimizes parameters annually using an expanding historical window. This ensures the strategy "earns" its returns by learning only from available past data to trade the unseen future.
+2. **Execution Friction Simulation:** Applied a mandatory **65bps (0.65%) penalty** per trade to account for institutional reality—bid-ask spreads, slippage, and contract roll costs.
+3. **Validation:** Implemented a **1,000-rep Permutation Test** to generate a synthetic null distribution. This confirms that the alpha is a result of structural edge (biological/industrial cycles) rather than stochastic luck.
+![Permutation Test](Permutation_Plot.png)
+4. **Portfolio Aggregation:** Developed a "Master Fund" to blend non-correlated signals across industrial and agricultural sectors to smooth the equity curve and compress drawdowns.
 
+## Results
 | Strategy / Asset | Net Alpha (65bps) | Sharpe Ratio | P-Value |
 |:--- |:---:|:---:|:---:|
 | **Master Fund (Aggregated)** | **+5.82%** | **0.61** | **0.0000***** |
@@ -18,41 +27,21 @@ Unlike traditional models that ignore implementation costs, this engine applies 
 
 ![Alpha Comparison Chart](alpha_comparison_chart.png)
 
----
-
-### Technical Architecture
-
-#### 1. Recursive Walk-Forward Engine
-To eliminate **Look-Ahead Bias**, the model simulates real-time decision-making. The strategy re-optimizes its parameters annually using an expanding historical window. This ensures the model "earns" its returns by learning from the past to trade the unseen future.
-
-
-
-#### 2. Non-Parametric Significance Testing
-Commodity returns are non-normal and fat-tailed. Standard t-tests often yield false positives in these environments. I implemented a **1,000-rep Permutation Test (Monte Carlo)** to generate a synthetic null distribution. The results confirm that the Alpha in Lumber, Wheat, and Corn is a result of structural edge rather than stochastic noise.
-
-![Permutation Test](Permutation_Plot.png)
-
-#### 3. Portfolio Risk Engineering (The Master Fund)
-To combat the high idiosyncratic volatility of single-commodity trading, I engineered a **Master Fund** aggregator. By blending non-correlated signals across industrial and agricultural sectors, the framework achieved:
-* **Drawdown Compression:** Reduced Max Drawdown from **-23.6%** (Lumber) to **-16.3%** (Master Fund).
-* **Return Smoothing:** Stabilized the equity curve for institutional viability while maintaining a 0.61 Sharpe Ratio.
-
+* **Accuracy Metrics:** * **Master Fund (Aggregated):** +5.82% Net Alpha with a **0.61 Sharpe Ratio**.
+  * **Lumber:** +6.73% Net Alpha (P-Value: 0.0000).
+  * **Dow Jones (Control):** -6.42% (Confirming efficiency in financialized assets).
+* **Key Findings:** * Seasonal alpha is a function of **Physical Constraints**. 
+  * Signal aggregation reduced Max Drawdown from **-23.6%** (single asset) to **-16.3%** (Master Fund), making the strategy institutionally viable.
 ![Equity Curve](MasterFund_EquityCurve.png)
 
----
+## Next Steps
+* **Exogenous Variable Integration:** Incorporating weather-pattern data (El Niño/La Niña) and freight-cost indices to refine signal timing in physical markets.
+* **Dynamic Capital Allocation:** Implementing a volatility-targeting overlay to shift weights between commodities based on real-time correlation shifts.
+* **Cross-Sector Expansion:** Testing the "Physical Rigidity" thesis on Energy markets (Natural Gas, Heating Oil).
 
-### Strategic Thesis: Physical Rigidity
-The research confirms that Alpha is a function of **Physical Constraints**. Seasonality fails in highly liquid, financialized assets (Bitcoin, Dow Jones) but persists in markets with biological supply constraints (harvest cycles) and high storage costs. This project serves as an empirical rejection of the Weak-Form Efficient Market Hypothesis (EMH) within the physical commodity complex.
 
----
 
-### Technical Stack
-* **Language:** R (Tidyquant, PerformanceAnalytics, PortfolioAnalytics, Purrr)
-* **Optimization:** Recursive Walk-Forward (OOS)
-* **Validation:** Non-Parametric Permutation (1,000-Rep Monte Carlo)
-* **Architecture:** Multi-Asset Signal Aggregation
 
----
 
-**Contact:** **Alexander Laudano** – [alexlaudano22@gmail.com](mailto:alexlaudano22@gmail.com)  
-**LinkedIn:** [linkedin.com/in/alexander-laudano](https://www.linkedin.com/in/alexander-laudano-874073259/)
+
+
