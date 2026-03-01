@@ -27,7 +27,7 @@
 
 ![Alpha Comparison Chart](alpha_comparison_chart.png)
 
-* **Accuracy Metrics:**
+**Accuracy Metrics:**
 *  **Master Fund (Aggregated):** +5.82% Net Alpha with a **0.61 Sharpe Ratio**.
   * **Lumber:** +6.73% Net Alpha (P-Value: 0.0000).
   * **Dow Jones (Control):** -6.42% (Confirming efficiency in financialized assets).
