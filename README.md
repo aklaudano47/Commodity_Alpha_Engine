@@ -25,11 +25,10 @@
 | **CORN** | **+0.75%** | **0.32** | **0.0004***** |
 | **DOW JONES (Control)** | -6.42% | 0.00 | 0.7220 |
 
-![Alpha Comparison Chart](alpha_comparison_chart.png)
-
 * **Accuracy Metrics:** * **Master Fund (Aggregated):** +5.82% Net Alpha with a **0.61 Sharpe Ratio**.
   * **Lumber:** +6.73% Net Alpha (P-Value: 0.0000).
   * **Dow Jones (Control):** -6.42% (Confirming efficiency in financialized assets).
+![Alpha Comparison Chart](alpha_comparison_chart.png)
 * **Key Findings:** * Seasonal alpha is a function of **Physical Constraints**. 
   * Signal aggregation reduced Max Drawdown from **-23.6%** (single asset) to **-16.3%** (Master Fund), making the strategy institutionally viable.
 ![Equity Curve](MasterFund_EquityCurve.png)
