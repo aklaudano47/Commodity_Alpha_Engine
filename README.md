@@ -1,4 +1,4 @@
-# Commodity Alpha Engine: Systematic Seasonal Arbitrage
+# Seasonality in Commodities: Systematic Trading Strategy 
 
 ## Business Framing
 * **The Problem:** Many quantitative strategies fail in production because they rely on "backtest-fitted" anomalies that disappear once execution friction and look-ahead bias are accounted for. Furthermore, traditional financialized assets (like Equities or Bitcoin) have become too efficient for simple seasonal strategies to extract alpha.
